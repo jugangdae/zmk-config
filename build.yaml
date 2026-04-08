@@ -1,6 +1,6 @@
 include:
-# Lily58 without dongle 不带dongle的Lily58
-  # Lily58 with oled display(with nice_oled module) 适用于带oled的Lily58
+# Lily58 without dongle
+  # Lily58 with OLED display (with `nice_oled` module)
   - board: nice_nano_v2 
     shield: Lily58_L nice_oled
     snippet: studio-rpc-usb-uart 
@@ -8,7 +8,7 @@ include:
   - board: nice_nano_v2
     shield: Lily58_R nice_oled
     artifact-name: Lily58_right_oled
-  # Lily58 with nice!view display(with nice_view_custom module) 适用于带nice_view的Lily58
+  # Lily58 with nice!view display (with `nice_view_custom` module)
   - board: nice_nano_v2
     shield: Lily58_L Nice_view_config nice_view_custom
     snippet: studio-rpc-usb-uart
@@ -18,8 +18,8 @@ include:
     artifact-name: Lily58_right_nice_view
 
 
-#Lily58 with dongle 带dongle的Lily58
-  # dongle with LCD display 带LCD显示的dongle
+# Lily58 with dongle
+  # Dongle with LCD display
   - board: nice_nano_v2
     shield: Lily58_dongle_central dongle_screen
     snippet: studio-rpc-usb-uart
