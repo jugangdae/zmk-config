@@ -11,6 +11,11 @@
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/pointing.h>
 
+/* Apple Globe key */
+#define C_KEYBOARD_LAYOUT_SELECT (ZMK_HID_USAGE(HID_USAGE_CONSUMER, 0x029D))
+#define GLOBE C_KEYBOARD_LAYOUT_SELECT
+// As per PR 1938
+
 / {
     // Activate ADJUST layer by pressing raise and lower
 
