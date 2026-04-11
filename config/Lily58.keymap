@@ -15,7 +15,6 @@
 #define ZMK_POINTING_DEFAULT_SCRL_VAL 10    // default: 10
 
 / {
-
     conditional_layers { compatible = "zmk,conditional-layers"; };
 
     behaviors {
@@ -114,11 +113,11 @@
             //                    | TRANS | TRANS | TRANS | TRANS | TRANS | TRANS | TRANS | TRANS |
 
             bindings = <
-&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6                    &kp F7    &kp F8       &kp F9    &kp F10        &kp F11  &kp F12
-&trans  &trans  &trans  &trans  &trans  &trans                    &kp HOME  &kp PAGE_UP  &kp UP    &kp PAGE_DOWN  &trans   &trans
-&trans  &trans  &trans  &trans  &trans  &trans                    &kp END   &kp LEFT     &kp DOWN  &kp RIGHT      &trans   &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans    &trans       &trans    &trans         &trans   &trans
-                        &trans  &trans  &trans  &trans    &trans  &trans    &trans       &trans
+&kp F1  &kp F2  &kp F3  &kp F4  &kp F5  &kp F6                         &kp F7    &kp F8       &kp F9    &kp F10        &kp F11  &kp F12
+&trans  &trans  &trans  &trans  &trans  &trans                         &kp HOME  &kp PAGE_UP  &kp UP    &kp PAGE_DOWN  &trans   &trans
+&trans  &trans  &trans  &trans  &trans  &trans                         &kp END   &kp LEFT     &kp DOWN  &kp RIGHT      &trans   &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &td_minus    &td_plus  &trans    &trans       &trans    &trans         &trans   &trans
+                        &trans  &trans  &trans  &trans       &trans    &trans    &trans       &trans
             >;
 
             //sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
