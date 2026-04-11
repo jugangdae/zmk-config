@@ -40,6 +40,20 @@
             bindings = <&kp SINGLE_QUOTE>, <&kp DQT>;
         };
 
+        td_spotlight: td_spotlight {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_SPOTLIGHT";
+            #binding-cells = <0>;
+            bindings = <&kp LGUI>, <&kp LG(SPACE)>, <&none>;
+        };
+
+        td_minus: td_minus {
+            compatible = "zmk,behavior-tap-dance";
+            label = "TD_MINUS";
+            #binding-cells = <0>;
+            bindings = <&kp MINUS>, <&kp LS(MINUS)>;
+        };
+
         td_plus: td_plus {
             compatible = "zmk,behavior-tap-dance";
             label = "TD_PLUS";
@@ -47,11 +61,11 @@
             bindings = <&kp EQUAL>, <&kp PLUS>;
         };
 
-        td_spotlight: td_spotlight {
+        new_behavior: new_behavior {
             compatible = "zmk,behavior-tap-dance";
-            label = "TD_SPOTLIGHT";
+            label = "NEW_BEHAVIOR";
             #binding-cells = <0>;
-            bindings = <&kp LGUI>, <&kp LG(SPACE)>, <&none>;
+            bindings = <&kp MINUS>, <&kp UNDER>;
         };
     };
 
@@ -86,11 +100,11 @@
             //                     | TRANS | TRANS | TRANS | TRANS | TRANS | TRANS | TRANS | TRANS |
 
             bindings = <
-&kp F1  &kp F2    &kp F3  &kp F4    &kp F5      &kp F6                             &kp F7     &kp F8    &kp F9     &kp F10   &kp F11   &kp F12
-&trans  &kp N1    &kp N2  &kp N3    &kp N4      &kp N5                             &kp N6     &kp N7    &kp N8     &kp N9    &kp N0    &trans
-&trans  &kp EXCL  &kp AT  &kp HASH  &kp DOLLAR  &kp PRCNT                          &kp CARET  &kp AMPS  &kp ASTRK  &kp LPAR  &kp RPAR  &trans
-&trans  &trans    &trans  &trans    &trans      &trans     &kp MINUS    &kp EQUAL  &trans     &trans    &trans     &trans    &trans    &trans
-                          &trans    &trans      &trans     &trans       &trans     &trans     &trans    &trans
+&kp F1  &kp F2    &kp F3  &kp F4    &kp F5      &kp F6                            &kp F7     &kp F8    &kp F9     &kp F10   &kp F11   &kp F12
+&trans  &kp N1    &kp N2  &kp N3    &kp N4      &kp N5                            &kp N6     &kp N7    &kp N8     &kp N9    &kp N0    &trans
+&trans  &kp EXCL  &kp AT  &kp HASH  &kp DOLLAR  &kp PRCNT                         &kp CARET  &kp AMPS  &kp ASTRK  &kp LPAR  &kp RPAR  &trans
+&trans  &trans    &trans  &trans    &trans      &trans     &td_minus    &td_plus  &trans     &trans    &trans     &trans    &trans    &trans
+                          &trans    &trans      &trans     &trans       &trans    &trans     &trans    &trans
             >;
 
             //sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN &inc_dec_kp PG_UP PG_DN>;
